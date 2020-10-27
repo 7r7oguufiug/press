@@ -25,6 +25,11 @@ class FileCanaryTests {
     assertThat(file.read()).isEqualTo(content)
   }
 
+  @Test fun name() {
+    val file = File("batman.md")
+    assertThat(file.name).isEqualTo("batman.md")
+  }
+
   @Test fun delete() {
     val file = File(storage, "batman.md")
 
